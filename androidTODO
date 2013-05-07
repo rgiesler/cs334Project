@@ -1,0 +1,9 @@
+Calvin's Android code.
+
+Work to be done (Still need to discuss with Android co-developers):
+- Login to server to download data into mobile devices SQl database.
+- Add functionality to input expenses and add them to mobile devices database.
+- Add functionality to input incomes and add them to mobile devices database.
+- Add functionality to input budgets and add them to mobile devices database.
+- Add functionality to visualise income vs expanses vs budget or any permutation thereof, e.g. table or graph.
+- Logout of server after pushing database changes to online database.
