@@ -103,7 +103,13 @@ StockService {
 //	        symbols.add(stock.getSymbol());
 //	        prices.add(stock.getPrice());
 //	        dates.add(stock.getDate());
-	        if (symbol.equals(stock.getSymbol())) {
+	        if (stock.getSymbol().contains(symbol)) {
+	        	symbols.add(stock.getSymbol());
+	        	prices.add(stock.getPrice());
+	        	dates.add(stock.getDate());
+	        }
+	        else if (symbol.equals("*") || symbol.equals(""))
+	        {
 	        	symbols.add(stock.getSymbol());
 	        	prices.add(stock.getPrice());
 	        	dates.add(stock.getDate());

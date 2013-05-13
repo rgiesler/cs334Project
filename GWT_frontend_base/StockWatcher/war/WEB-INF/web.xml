@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- <!DOCTYPE web-app -->
-<!-- PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" -->
-<!-- "http://java.sun.com/dtd/web-app_2_3.dtd"> -->
-
-<web-app>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- <!DOCTYPE web-app --><!-- PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" --><!-- "http://java.sun.com/dtd/web-app_2_3.dtd"> --><web-app>
 
 	<!-- Default page to serve -->
 	<welcome-file-list>
@@ -32,5 +27,19 @@
 		<servlet-name>stockService</servlet-name>
 		<url-pattern>/stockwatcher/stock</url-pattern>
 	</servlet-mapping>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
 
 </web-app>
